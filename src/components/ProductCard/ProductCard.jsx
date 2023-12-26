@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ProductDetail from "../../pages/Products/ProductDetail";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import "./ProductCard.css"
 function ProductCard(props) {
 	console.log(props);
 	const handleDeleteClick = (id) => {
@@ -20,9 +20,14 @@ function ProductCard(props) {
 				class="card-img-top img-fluid"
 				alt="..."
 			/>
-			<div class="card-body">
-				<h5 class="card-title">{props.product.title}</h5>
-				<p class="card-text">{props.product.description}</p>
+			<div class="card-body text">
+			<h5 className="card-title">{props.product.title}</h5>
+        <p className="card-text">
+          {props.product.description.length > 10
+            ? props.product.description.substring(0, 50) + "..."
+            : props.product.description}
+        </p>
+				<p class="card-text">Stok Miktarı: {props.product.stock}</p>
 				<Link to={"/products/" + props.product.id} class="btn btn-primary">
 					Detail
 				</Link>

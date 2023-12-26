@@ -1,0 +1,31 @@
+.product-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Tüm ProductCard bileşenlerinin içeriğinin yüksekliğini 100%'e ayarla */
+.product-card-wrapper .card {
+  height: 100%;
+}
+
+/* İçerikleri dikey olarak ortala */
+.product-card-wrapper .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçeriği dikeyde ortalar */
+  }
+.card{
+    display: flex;
+
+}
+.card>img{
+    width: 150px;
+    height: 100px;
+    margin-top: 2px;
+    align-self: center;
+}
+.text{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}

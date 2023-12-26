@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 function ProductDetail(props, { images }) {
-    const [productDetail, setProductDetail] = useState([]);
+    const [productDetail, setProductDetail] = useState({});
     let { id } = useParams();
 
     useEffect(() => {

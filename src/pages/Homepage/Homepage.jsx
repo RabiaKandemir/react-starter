@@ -21,6 +21,7 @@ export default function Homepage() {
   }
   return (
     <div>
+      
       <Link to={"/products"}>Ürünler Sayfası</Link>
     </div>
   );
